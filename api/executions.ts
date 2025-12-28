@@ -32,7 +32,10 @@ export async function getExecutionById(id: string): Promise<TestExecutionWithDet
     .from('test_executions')
     .select(`
       *,
-      suite:test_suites(*),
+      suite:test_suites(
+        *,
+        items:checklist_items(*)
+      ),
       results:execution_results(
         *,
         item:checklist_items(*)

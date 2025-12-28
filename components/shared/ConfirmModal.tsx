@@ -63,7 +63,7 @@ export default function ConfirmModal({
         {/* Actions */}
         <div className="flex items-center gap-3 pt-2">
           <Button
-            variant={variant}
+            variant={variant === 'danger' ? 'danger' : 'primary'}
             onClick={handleConfirm}
             disabled={loading}
             className="flex-1"

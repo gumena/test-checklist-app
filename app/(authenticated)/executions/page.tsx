@@ -45,7 +45,7 @@ export default function ExecutionsPage() {
 
   const filteredExecutions = executions.filter((execution) => {
     // Search filter
-    if (searchQuery && !execution.name.toLowerCase().includes(searchQuery.toLowerCase())) {
+    if (searchQuery && !execution.name?.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false;
     }
 
@@ -246,8 +246,8 @@ export default function ExecutionsPage() {
                         </span>
                       </td>
                       <td className="py-4 px-4">
-                        <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border ${getStatusColor(execution.status)}`}>
-                          {getStatusIcon(execution.status)}
+                        <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border ${getStatusColor(execution.status as ExecutionStatus)}`}>
+                          {getStatusIcon(execution.status as ExecutionStatus)}
                           <span className="text-xs font-medium capitalize">
                             {execution.status.replace('_', ' ')}
                           </span>

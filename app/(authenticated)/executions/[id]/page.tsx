@@ -128,7 +128,7 @@ export default function ExecutionDetailPage({ params }: ExecutionDetailPageProps
                   Suite: {execution.suite.name}
                 </p>
               </div>
-              <Badge variant={execution.status === 'completed' ? 'success' : 'default'}>
+              <Badge variant={execution.status === 'completed' ? 'passed' : 'default'}>
                 {execution.status}
               </Badge>
             </div>

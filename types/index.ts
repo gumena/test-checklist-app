@@ -36,7 +36,7 @@ export interface TestSuiteWithDetails extends TestSuite {
 }
 
 export interface TestExecutionWithDetails extends TestExecution {
-  suite: TestSuite;
+  suite: TestSuiteWithDetails;
   results?: ExecutionResultWithDetails[];
 }
 

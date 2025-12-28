@@ -51,7 +51,7 @@ export default function ExecutionFilters({
         <div>
           <Select
             value={statusFilter}
-            onChange={(e) => onStatusChange(e.target.value as ExecutionStatus | 'all')}
+            onChange={(value) => onStatusChange(value as ExecutionStatus | 'all')}
             options={statusOptions}
           />
         </div>
@@ -60,7 +60,7 @@ export default function ExecutionFilters({
         <div>
           <Select
             value={suiteFilter}
-            onChange={(e) => onSuiteChange(e.target.value)}
+            onChange={(value) => onSuiteChange(value)}
             options={suiteOptions}
           />
         </div>
